@@ -1,0 +1,197 @@
+/* --- Responsive Design for Mobile --- */
+/*
+This media query applies styles when the screen size is 768px or smaller.
+This is a good general breakpoint for tablets and phones.
+*/
+@media (max-width: 768px) {
+
+    /* Reconfigure the header for a mobile view */
+    .main-nav {
+        flex-direction: column; /* Stack the brand and links vertically */
+        align-items: flex-start; /* Align everything to the left */
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack the links vertically */
+        align-items: flex-start;
+        width: 100%; /* Make the links take up the full width */
+        margin-top: 1rem;
+    }
+    
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 0.5rem; /* Add space between stacked links */
+    }
+
+    /* Reconfigure the footer for a mobile view */
+    .footer-content {
+        flex-direction: column; /* Stack the copyright and social links */
+        text-align: center;
+    }
+
+    .footer-content p {
+        flex: none; /* Reset the flex property so it doesn't try to take 50% width */
+        margin-bottom: 1rem; /* Add space between the copyright and social links */
+    }
+
+    .social-links {
+        display: flex; /* Change from grid to flex for better horizontal alignment */
+        justify-content: center; /* Center the social links */
+        gap: 1rem;
+    }
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1 0 auto; /* This is the key line! */
+}
+
+.container {
+    max-width: 1200px; /* Limits the width for better readability */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 20px; /* Adds some space on the sides */
+}
+
+main {
+  /* This gives your main content area some space */
+  padding: 2rem 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* --- Navigation Bar (Header) --- */
+.main-nav {
+    display: flex; /* Flexbox is perfect for aligning items horizontally */
+    justify-content: space-between; /* Pushes brand and links to opposite ends */
+    align-items: center; /* Vertically centers all items */
+    background-color: #2D4059;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+}
+
+.nav-brand a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none; /* Removes the underline from the link */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Removes the bullet points from the list */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 2rem; /* Adds space between the links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease; /* A smooth color change on hover */
+}
+
+.nav-links a:hover {
+    color: #FFD460; /* A highlight color on hover */
+}
+
+.card-container {
+    display: flex; /* Enables Flexbox layout */
+    flex-wrap: wrap; /* This is the key! It allows items to wrap to a new line */
+    gap: 2rem; /* Adds consistent space between all cards */
+    justify-content: left; /* Centers the cards when there's extra space */
+}
+
+.card {
+    /* Your initial styles */
+    display: flex;
+    padding: 1rem;
+    
+    /* Extra styles for a finished look */
+    flex-direction: column; /* Stacks the child elements vertically */
+    border: 1px solid #ddd; /* A subtle border */
+    border-radius: 8px; /* Rounded corners for a modern feel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A gentle shadow for depth */
+    background-color: #fff;
+    max-width: 350px; /* Limits the card's width */
+    overflow: hidden; /* Ensures the image doesn't overflow rounded corners */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd; /* A separator below the image */
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-title {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-text {
+    margin-bottom: 0;
+    color: #666;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #2D4059;
+    color: #fff;
+    padding: 2.5rem 0; /* Increased padding for more vertical space */
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Pushes the two sections to opposite ends */
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    flex: 1 1 50%; /* Allows the copyright text to take up space */
+}
+
+.social-links {
+    display: grid;
+    gap: 1.5rem;
+} 
+
+.social-links a {
+    color: #FFD460;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
