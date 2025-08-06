@@ -52,7 +52,7 @@ body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     line-height: 1.6;
-    background-color: #fff;
+    background-color: #FFEAD8;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -129,12 +129,25 @@ main {
     
     /* Extra styles for a finished look */
     flex-direction: column; /* Stacks the child elements vertically */
-    border: 1px solid #ddd; /* A subtle border */
+    /*border: 1px solid #F07B3F; /*A subtle border */
     border-radius: 8px; /* Rounded corners for a modern feel */
+    /* outline: 3px solid #EA5455;  */
+    outline-offset: -12px; /* Pulls the outline inward */
+
+    /* Animation for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A gentle shadow for depth */
     background-color: #fff;
     max-width: 350px; /* Limits the card's width */
     overflow: hidden; /* Ensures the image doesn't overflow rounded corners */
+}
+
+.card:hover {
+    /* The "rise up" effect */
+    transform: translateY(-5px); 
+    /* A more prominent shadow to make it look like it's lifting */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .card-image {
