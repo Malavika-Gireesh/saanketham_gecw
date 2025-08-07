@@ -38,6 +38,7 @@ This ingenious method allows us to have a dynamic, up-to-date website without th
 To run this project locally, you only need to open view/index.html in your browser. To update the scholarship data, follow the instructions in the scripts/ directory to run the Python script.
 - Follow the instructions to clone the repository.
 ```
-git clone https://Malavika-Gireesh/saanketham_gecw.git
+git clone https://github.com/Malavika-Gireesh/saanketham_gecw.git
 ```
 ### Feel free to contribute or hit us with a suggestion ❤️
+
